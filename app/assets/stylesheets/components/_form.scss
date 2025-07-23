@@ -1,0 +1,42 @@
+.form {
+  &__box {
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,1);
+  }
+
+  &__heading {
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+  }
+
+  &__label {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  &__field {
+    font-size: 1.5rem !important;
+    padding: 1rem !important;
+  }
+
+  &__check-label {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    margin-top: .3rem;
+  }
+
+  &__check-input {
+    font-size: 2rem;
+  }
+
+  &--centered {
+    margin: 0 auto;
+    width: 50%;
+    @media only screen and (max-width: 992px) {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.heading {
+  font-weight: 800;
+
+  &--massive {
+    font-size: 18rem;
+  }
+
+  &--jumbo {
+    font-size: 10rem;
+  }
+
+
+  &--large {
+    font-size: 5.5rem;
+  }
+
+  &--big {
+    font-size: 4rem;
+  }
+
+  &--normal {
+    font-size: 2.8rem;
+  }
+
+  &--small {
+    font-size: 1.8rem;
+  }
+}
+
+.text {
+  &--default-size {
+    font-size: $fs-4;
+  }
+
+  &--larger-size {
+    font-size: 1.5rem;
+  }
+
+  &--white {
+    color: $white;
+  }
+}
+
+.link {
+  text-decoration: none;
+
+  &--black {
+    color: $black;
+     &:hover {
+      color: $black;
+    }
+  }
+
+  &--white {
+    color: $white;
+     &:hover {
+      color: $white;
+    }
+  }
+
+  &--red {
+    color: $red-300;
+     &:hover {
+      color: $red-300;
+    }
+  }
+}

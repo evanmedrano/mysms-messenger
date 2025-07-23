@@ -1,0 +1,12 @@
+.errors {
+  .error {
+    &__heading {
+      letter-spacing: 1rem;
+      text-transform: uppercase;
+    }
+
+    &__image {
+      max-width: 1000px;
+    }
+  }
+}
