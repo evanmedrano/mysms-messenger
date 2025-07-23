@@ -1,11 +1,3 @@
-<% content_for :title, "New sms message" %>
-
-<h1>New sms message</h1>
+<% content_for :title, "New Message" %>
 
 <%= render "form", sms_message: @sms_message %>
-
-<br>
-
-<div>
-  <%= link_to "Back to sms messages", sms_messages_path %>
-</div>

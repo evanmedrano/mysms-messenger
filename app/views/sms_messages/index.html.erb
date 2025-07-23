@@ -1,8 +1,16 @@
-<p style="color: green"><%= notice %></p>
+<div class="text-center mb-5 d-flex justify-content-between">
+  <h1 class="heading">
+    Message History (<%= @sms_messages.count %>)
+  </h1>
 
-<% content_for :title, "Sms messages" %>
+  <%= link_to(
+    "New SMS Message",
+    new_sms_message_path,
+    class: "button button--black text-decoration-none",
+    data: { turbo: false }
+  ) %>
+</div>
 
-<h1>Sms messages</h1>
 
 <div id="sms_messages">
   <% @sms_messages.each do |sms_message| %>
@@ -12,5 +20,3 @@
     </p>
   <% end %>
 </div>
-
-<%= link_to "New sms message", new_sms_message_path %>

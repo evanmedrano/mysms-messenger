@@ -1,4 +1,6 @@
 class SmsMessagesController < ApplicationController
+  before_action :authenticate_user!
+
   before_action :set_sms_message, only: %i[ show edit update destroy ]
 
   # GET /sms_messages or /sms_messages.json

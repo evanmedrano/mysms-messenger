@@ -10,16 +10,13 @@
     <ul class="d-flex flex-row align-items-center navbar-nav">
       <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to(
+          <%= button_to(
             "Sign out",
             destroy_user_session_path,
             method: :delete,
             class: "nav-link",
             data: { turbo: false }
           ) %>
-        </li>
-        <li class="nav-item button button--black">
-          <%#= link_to "Add Post", new_post_path, class: "nav-link" %>
         </li>
       <% else %>
         <li class="nav-item">
