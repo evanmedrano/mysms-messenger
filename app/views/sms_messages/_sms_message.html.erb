@@ -1,12 +1,19 @@
-<div id="<%= dom_id sms_message %>">
-  <p>
-    <strong>Phone number:</strong>
-    <%= sms_message.phone_number %>
-  </p>
+<div id="<%= dom_id sms_message %>" class="text--default-size mb-5">
+  <div class="d-flex justify-content-between">
+    <p>
+      <strong><%= sms_message.phone_number %></strong>
+    </p>
 
-  <p>
-    <strong>Message:</strong>
-    <%= sms_message.message %>
-  </p>
+    <p><%= sms_message.message_sent_at %></p>
+  </div>
 
+  <div class="form-control form__field overflow-break">
+    <p><%= sms_message.message %></p>
+  </div>
+
+  <div class="d-flex justify-content-end">
+    <span class="text--default-size text--grey">
+      <%= sms_message.message.length %>/250
+    </span>
+  </div>
 </div>

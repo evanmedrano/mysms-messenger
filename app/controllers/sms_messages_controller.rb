@@ -27,7 +27,7 @@ class SmsMessagesController < ApplicationController
 
     respond_to do |format|
       if @sms_message.save
-        format.html { redirect_to @sms_message, notice: "Sms message was successfully created." }
+        format.html { redirect_to root_path, notice: "SMS message was successfully created." }
         format.json { render :show, status: :created, location: @sms_message }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -40,7 +40,7 @@ class SmsMessagesController < ApplicationController
   def update
     respond_to do |format|
       if @sms_message.update(sms_message_params)
-        format.html { redirect_to @sms_message, notice: "Sms message was successfully updated." }
+        format.html { redirect_to @sms_message, notice: "SMS message was successfully updated." }
         format.json { render :show, status: :ok, location: @sms_message }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -54,7 +54,7 @@ class SmsMessagesController < ApplicationController
     @sms_message.destroy!
 
     respond_to do |format|
-      format.html { redirect_to sms_messages_path, status: :see_other, notice: "Sms message was successfully destroyed." }
+      format.html { redirect_to sms_messages_path, status: :see_other, notice: "SMS message was successfully destroyed." }
       format.json { head :no_content }
     end
   end

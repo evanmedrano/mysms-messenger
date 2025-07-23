@@ -15,8 +15,5 @@
 <div id="sms_messages">
   <% @sms_messages.each do |sms_message| %>
     <%= render sms_message %>
-    <p>
-      <%= link_to "Show this sms message", sms_message %>
-    </p>
   <% end %>
 </div>
