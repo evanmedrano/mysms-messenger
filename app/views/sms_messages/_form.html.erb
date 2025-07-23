@@ -12,20 +12,29 @@
 
   <%= form_with(model: sms_message) do |form| %>
     <% if sms_message.errors.any? %>
-      <div style="color: red">
-        <h2><%= pluralize(sms_message.errors.count, "error") %> prohibited this sms_message from being saved:</h2>
+      <h2 class="text-center">
+        <%= I18n.t(
+          "errors.messages.not_saved",
+          count: sms_message.errors.count,
+          resource: "message"
+        ) %>
+      </h2>
 
-        <ul>
-          <% sms_message.errors.each do |error| %>
-            <li><%= error.full_message %></li>
-          <% end %>
-        </ul>
-      </div>
+      <ul class="u-remove-list-style mb-5">
+        <% sms_message.errors.full_messages.each do |message| %>
+          <li class="heading text--larger-size text-center"><%= message %></li>
+        <% end %>
+      </ul>
     <% end %>
+
+    <%= form.hidden_field :user_id, value: current_user.id %>
 
     <div class="field mb-4">
       <%= form.label :phone_number, class: "form__label" %>
-      <%= form.text_field :phone_number, class: "form-control form__field" %>
+      <%= form.text_field(
+        :phone_number,
+        class: "form-control form__field"
+      ) %>
     </div>
 
     <div>

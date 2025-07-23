@@ -67,6 +67,6 @@ class SmsMessagesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def sms_message_params
-      params.expect(sms_message: [ :phone_number, :message ])
+      params.expect(sms_message: [ :phone_number, :message, :user_id ])
     end
 end

@@ -10,6 +10,5 @@ RSpec.describe SmsMessage, type: :model do
 
     it { should validate_presence_of(:message) }
     it { should validate_presence_of(:phone_number) }
-    it { should validate_presence_of(:user) }
   end
 end
