@@ -27,6 +27,8 @@ class SmsMessagesController < ApplicationController
 
     respond_to do |format|
       if @sms_message.save
+        TwilioClient.new.send_text(@sms_message)
+
         format.html { redirect_to root_path, notice: "SMS message was successfully created." }
         format.json { render :show, status: :created, location: @sms_message }
       else
